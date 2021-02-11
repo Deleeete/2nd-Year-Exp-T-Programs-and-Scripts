@@ -3,22 +3,24 @@ Second-year experiment T utils
 
 ## Programs
 ### RocheeeLimit
-Usage: The actual performer of the experiment. Its behaviour is defined by the file "setup.par".
+Usage: The actual performer of the experiment. Its behaviour is defined by the file "setup.par", which should located at the same directory to the program.
 
 The program will automatically step UP a specific parameter in rpg.par, change the dDelta to an appropriate value, and then run the simulation.
 All mediate results will be store into "./output/" folder, and when finished, the program will produce an overall csv table with all median of distances data called "all_XX_YY_ZZ.csv", where XX, YY and ZZ are hours, minutes and seconds of the created time of the csv file.
+
+The setup.par file is not required to exist. If so, the program will split out a default setup.par file.
 
 ### setup.par
 Usage: A file which contains parameters to define the program's behaviour.
 
 Format of all lines: 
-[Descrption]=[Value]
+<Descrption>=<Value>
 
 For example: 
 Number of iteration=100
 Pattern string=abcdefg
 
-Note that there should **NOT** be extra white space character around the "=" sign. The description can be any string since the program just does not care. The program uses line number to identify the meaning of the parameters, the order of the lines matters.
+Note that there should **NOT** be extra white space character around the "=" sign. <Description> can be any string since the program just does not care. The program uses line number to identify the meaning of the parameters, so the order of the lines matters.
 
 The definitive meaning of the lines are:
 
