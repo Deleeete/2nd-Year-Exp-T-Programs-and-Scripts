@@ -60,7 +60,7 @@ Usage: Can help to print the physical properties of the comet at a known time st
 ### data_auto.sh
 Usage: Can help to print all COM position of the comet between two known time steps.
 
-### rpx_helper.sh
+### rpx-helper.sh
 Usage: This file is only a helper script for program RocheeeLimit.exe. **It is necessary for RocheeeLimit to run properly.**
 
 ### bt.sh
