@@ -60,13 +60,13 @@ Usage: Run all tasks above in the correct order.
 Usage: Can help to print the physical properties of the comet at a known time step.
 
 ### data_auto.sh
-Usage: Can help to print all COM position of the comet between two known time steps.
+Usage: Can help to print all COM position of the comet between two known time steps. Existing just for convenience.
 
 ### rpx-helper.sh
-Usage: This file is only a helper script for program RocheeeLimit.exe. **It is necessary for RocheeeLimit to run properly.**
+Usage: This file is only a helper script for program RocheeeLimit. **It is necessary for RocheeeLimit to run properly.**
 
 ### bt.sh
-Usage: This bash can convert ss files in "./output/ss/" to bt files in "./output/bt/". Another helper script for RocheeeLimit to called, **necessary.**
+Usage: This bash can convert ss files in "./output/ss/" to bt files in "./output/bt/". **Another helper script for RocheeeLimit to called, necessary.**
 
 ### c2.sh
 Usage: A extended version of calc.sh that not only do the calculation tasks but also do the visualisation tasks. Existing just for convenience.
