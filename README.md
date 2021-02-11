@@ -18,23 +18,23 @@ For example:
 Number of iteration=100
 Pattern string=abcdefg
 
-Note that there should NOT be extra white space character around the "=" sign. The description can be any string since the program just does not care. The program uses line number to identify the meaning of the parameters, the order of the lines matters.
+Note that there should **NOT** be extra white space character around the "=" sign. The description can be any string since the program just does not care. The program uses line number to identify the meaning of the parameters, the order of the lines matters.
 
 The definitive meaning of the lines are:
 
-Line1: The number of the line that contains the desired stepping parameter. For example, if one needs to change the density parameter in rpg.par, which is located in line 2, then the first line of setup.par should be written as "Any informative text such as TargetLine=2"
+* Line1: The number of the line that contains the desired stepping parameter. For example, if one needs to change the density parameter in rpg.par, which is located in line 2, then the first line of setup.par should be written as "Any informative text such as TargetLine=2"
 
-Line2: The pattern of changing for that line. Use '$' to indicate where should the stepped parameter be placed. For example, for density, line 2 should be written as something like "Bulk density	$	# in kg/m^3 ". The '$' will be replaced by the changing number during runtime.
+* Line2: The pattern of changing for that line. Use '$' to indicate where should the stepped parameter be placed. For example, for density, line 2 should be written as something like "Bulk density	$	# in kg/m^3 ". The '$' will be replaced by the changing number during runtime.
 
-Line3: The initial value of the stepping parameter. Can be a decimal. 
+* Line3: The initial value of the stepping parameter. Can be a decimal. 
 
-Line4: The increment for the target parameter to step every time. 
+* Line4: The increment for the target parameter to step every time. 
 
-Line5: The expected number of stepping the target parameter and rerun the simulation. 
+* Line5: The expected number of stepping the target parameter and rerun the simulation. 
 
-Line6: Whether redirect the std error to program output or not. Can be set as "true" or "false". When set true, the error from rpg or rpx programs will show during the process of RocheeeLimit.exe, which will be good for debugging but noisy for normal usage.
+* Line6: Whether redirect the std error to program output or not. Can be set as "true" or "false". When set true, the error from rpg or rpx programs will show during the process of RocheeeLimit.exe, which will be good for debugging but noisy for normal usage.
 
-Line7: The standard of destruction. All comets with a median of distances that higher than this value will be marked as destructed. When detected the destructed frame, the program RocheeeLimit.exe will automatically calculate the distance and split the data into "./output/csv/out.csv".
+* Line7: The standard of destruction. All comets with a median of distances that higher than this value will be marked as destructed. When detected the destructed frame, the program RocheeeLimit.exe will automatically calculate the distance and split the data into "./output/csv/out.csv".
 
 ## Scripts
 ### rpx.sh
@@ -58,13 +58,13 @@ Usage: Run all tasks above in the correct order.
 Usage: Can help to print the physical properties of the comet at a known time step.
 
 ### data_auto.sh
-Usage: Can help to print all COM position of the comet between two known time step.
+Usage: Can help to print all COM position of the comet between two known time steps.
 
 ### rpx_helper.sh
-Usage: This file is only a helper script for program RocheeeLimit.exe. It is necessary for RocheeeLimit.exe to run properly.
+Usage: This file is only a helper script for program RocheeeLimit.exe. **It is necessary for RocheeeLimit.exe to run properly.**
 
 ### bt.sh
-Usage: Another helper script for RocheeeLimit.exe to called. Necessary.
+Usage: This bash can convert ss files in "./output/ss/" to bt files in "./output/bt/". Another helper script for RocheeeLimit.exe to called, **necessary.**
 
 ### c2.sh
 Usage: A extended version of calc.sh that not only do the calculation tasks but also do the visualisation tasks. Existing just for convenience.
