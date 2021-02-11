@@ -1,0 +1,7 @@
+#! /bin/bash
+
+./ssdraw ./output/ss/*.?????
+mkdir ./output/ras
+mkdir ./output/jpg
+rm -f ./output/ras/*.?????.ras
+mv *.?????.ras output/ras/
